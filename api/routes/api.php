@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::put('/products/{id}', [ProductController::class, 'update']);
     Route::delete('/products/{id}', [ProductController::class, 'destroy']);
     Route::post('/logout', [AuthController::class, 'logout']);
+    Route::resource('profils', ProfilController::class);
 });
 
 
