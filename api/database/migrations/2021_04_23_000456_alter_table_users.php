@@ -13,7 +13,11 @@ class AlterTableUsers extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('adresse')->nullable()->default(null);
+            $table->string('phone')->nullable()->default(null);
+            $table->string('profil_id')->references('id')->on('profils');
+        });
     }
 
     /**
@@ -23,6 +27,10 @@ class AlterTableUsers extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('adresse');
+            $table->dropColumn('phone');
+            $table->dropColumn('profil_id');
+        });
     }
 }
