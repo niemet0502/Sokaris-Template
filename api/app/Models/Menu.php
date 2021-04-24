@@ -13,4 +13,13 @@ class Menu extends Model
         'image',
         'description'
     ];
+
+     /**
+     * Get the products that owns the menu.
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
 }
