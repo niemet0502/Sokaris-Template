@@ -13,4 +13,12 @@ class OrderItem extends Model
         'order_id',
         'product_id'
     ];
+
+     /**
+     * Get the order that owns the items.
+     */
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
 }
