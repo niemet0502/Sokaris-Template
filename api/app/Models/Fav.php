@@ -12,4 +12,13 @@ class Fav extends Model
         'user_id',
         'product_id'
     ];
+
+      /**
+     * Get the product that owns the fav.
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+
 }
