@@ -18,4 +18,13 @@ class Order extends Model
         'customer_id',
         'delevery_id'
     ];
+
+    /**
+     * Get the items for the order.
+     */
+    public function items()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+
 }
