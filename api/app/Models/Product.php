@@ -20,4 +20,20 @@ class Product extends Model
     {
         return $this->belongsToMany(Order::class, 'order_items');
     }
+     /**
+     * Get the images for the product.
+     */
+    public function images()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
+
+     /**
+     * Get the menu that owns the product.
+     */
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class);
+    }
+
 }

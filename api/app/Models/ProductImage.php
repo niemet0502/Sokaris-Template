@@ -5,21 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model
+class ProductImage extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
-        'image',
-        'description'
+        'url',
+        'title',
+        'produc_id'
     ];
 
      /**
-     * Get the products that owns the menu.
+     * Get the product that owns the image.
      */
-    public function products()
+    public function product()
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsTo(Product::class);
     }
-
 }
