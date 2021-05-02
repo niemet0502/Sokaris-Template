@@ -19,12 +19,23 @@ class Order extends Model
         'delevery_id'
     ];
 
-    /**
-     * Get the items for the order.
-     */
-    public function items()
+    public function user()
     {
-        return $this->hasMany(OrderItem::class);
+        return $this->belongsTo(User::class);
     }
 
+    public function delivery()
+    {
+        return $this->belongsTo(User::class, 'delivery_id');
+    }
+
+    public function customer()
+    {
+        return $this->belongsTo(User::class, 'customer_id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'order_items');
+    }
 }

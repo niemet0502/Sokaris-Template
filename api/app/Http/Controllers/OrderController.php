@@ -25,7 +25,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validation = Validator($request->all(), [
             'status' => 'required',
             'amount' => 'required',
             'total_amount' => 'required',
@@ -36,7 +36,37 @@ class OrderController extends Controller
             'delevery_id' => 'required'
         ]);
 
-        return Order::create($request->all());
+        if ($validation->fails()) {
+            return response([
+                'status' => 'error',
+                'errors' => errorsToArray($validation)
+            ], 422);
+        }
+
+        $order = new Order();
+        $order->status = $request->status;
+        $order->amount = $request->amount;
+        $order->total_amount = $request->total_amount;
+        $order->delivery_adresse = $request->delivery_adresse;
+        $order->delivery_price = $request->delivery_price;
+        $order->user_id = $request->user_id;
+        $order->customer_id = $request->customer_id;
+        $order->delevery_id = $request->delevery_id;
+
+        // $user->roles()->sync([1 => ['expires' => true], 2, 3]);
+
+        if ($order->save()) {
+            $order->products()->sync($request->order_items);
+            return response([
+                'status' => 'success',
+                'message' => 'Commande ajouté avec succès !'
+            ], 200);
+        } else {
+            return response([
+                'status' => 'error',
+                'errors' => ['Une erreur est survenu lors de l\'enregistrement']
+            ], 400);
+        }
     }
 
     /**

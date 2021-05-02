@@ -16,6 +16,10 @@ class Product extends Model
         'price'
     ];
 
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'order_items');
+    }
      /**
      * Get the images for the product.
      */

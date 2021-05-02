@@ -39,7 +39,17 @@ class MenuController extends Controller
      */
     public function show($id)
     {
-        //
+        $menu = Menu::with(['products'])->find($id);
+
+        if (!$menu) {
+            return response([
+                'errors' => ['Menu introuvable !'],
+            ], 400);
+        }
+
+        return response([
+            'menu' => $menu
+        ], 200);
     }
 
     /**
