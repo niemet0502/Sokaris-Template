@@ -1,10 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import NotificationBadge from "./components/NotificationBadge/NotificationBadge"
+
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+
+import RedeemIcon from '@material-ui/icons/Redeem';
 
 function App() {
   return (
-    <div className="App">
-      <h1>How it's start</h1>
+    <div className="App" style={{paddingTop: '50px', paddingLeft: '50px'}}>
+      <NotificationBadge
+        Icon={NotificationsNoneIcon}
+      />
+
+      <NotificationBadge
+        Icon={RedeemIcon}
+      />
     </div>
   );
 }

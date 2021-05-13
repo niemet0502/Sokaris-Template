@@ -1,0 +1,30 @@
+.NotificationBadge{
+  width: 42px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 12px;
+  z-index: 1;
+}
+.NotificationBadge svg{
+  font-size: 26px;
+}
+
+.NotificationBadge__Count{
+  border: 1px solid green;
+  position: relative;
+  bottom: -10px;
+  width: 16px;
+  border-radius: 50%;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 31px;
+  font-size: 11px;
+  z-index: 2;
+}

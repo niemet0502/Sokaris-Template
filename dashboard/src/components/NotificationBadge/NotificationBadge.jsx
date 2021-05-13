@@ -1,10 +1,18 @@
 import React from 'react'
 import "./NotificationBadge.css"
-function NotificationBadge() {
+
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+
+function NotificationBadge({Icon,color,background,count}) {
   return (
-    <div>
-      <h1>Notification Badge</h1>
-    </div>
+    <>
+      <div className="NotificationBadge__Count">
+        12
+      </div>
+      <div className="NotificationBadge">
+        <Icon />
+      </div>
+    </>
   )
 }
 
