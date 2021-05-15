@@ -1,0 +1,31 @@
+.Topbar{
+  background-color: #F3F2F7;
+  height: 56px;
+  display: flex;
+}
+.Topbar__search{
+  flex: 2;
+}
+
+.Topbar__user{
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #D0D6DE;
+  padding-left: 35px;
+}
+
+.Topbar__user img{
+  border-radius: 63px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.Topbar__user span{
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
