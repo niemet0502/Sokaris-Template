@@ -1,8 +1,9 @@
 import NotificationBadge from "./components/NotificationBadge/NotificationBadge"
-
+import "./App.css"
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
-
 import RedeemIcon from '@material-ui/icons/Redeem';
+
+import Topbar from "./components/Topbar/Topbar"
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         color="rgb(94, 108, 147, 0.15)"
         count="5"
       />
+
+      <Topbar/>
     </div>
   );
 }
