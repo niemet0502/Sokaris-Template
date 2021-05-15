@@ -2,9 +2,13 @@
   width: 310px;
   border: 1px solid red;
   background-color: white;
-  padding: 10px 30px;
+  padding-top: 30px;
+  height: 900px;
+  margin-bottom: 30px;
 }
-
+.Sidebar_logoContainer {
+  padding-left: 30px;
+}
 .Sidebar_logoContainer h1{
   font-family: 'Poppins', sans-serif;;
   font-style: normal;
@@ -21,10 +25,45 @@
 }
 
 .Sidebar_logoContainer h6{
-  margin-top: -5px;
+  margin-top: -1px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: #B9BBBD;
+}
+
+.sidebarItem{
+  
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.sidebarItem.active{
+  color: #00B074;;
+  border-left: 5px solid #00B074;
+  border-radius: 5px;
+}
+
+.sidebarItem.active span {
+  background-color: rgba(0, 176, 116, 0.15);
+  display: flex;
+  align-items: center;
+}
+
+.sidebarItem h6{
+  margin: 0px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #464255;
+  margin-left: 20px;
+}
+
+.sidebarItem .MuiSvgIcon-root{
+  color: #464255;
 }
