@@ -4,6 +4,7 @@ import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import RedeemIcon from '@material-ui/icons/Redeem';
 
 import Topbar from "./components/Topbar/Topbar"
+import Sibebar from "./components/Sidebar/Sidebar"
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
 
       <h3>TopBar</h3>
       <Topbar/>
+
+      <h3>Sibebar</h3>
+      <Sibebar />
     </div>
   );
 }
