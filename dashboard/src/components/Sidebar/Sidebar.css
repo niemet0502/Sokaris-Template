@@ -1,0 +1,30 @@
+.Sidebar{
+  width: 310px;
+  border: 1px solid red;
+  background-color: white;
+  padding: 10px 30px;
+}
+
+.Sidebar_logoContainer h1{
+  font-family: 'Poppins', sans-serif;;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 72px;
+  color: #333333;
+  margin:0px;
+}
+
+.Sidebar_logoContainer h1 span{
+  color: #00B074;
+  margin-left: -8px;
+}
+
+.Sidebar_logoContainer h6{
+  margin-top: -5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #B9BBBD;
+}
