@@ -29,3 +29,36 @@
   line-height: 19px;
 }
 
+.Topbar__badge{
+  display: flex;
+  padding: 0px 30px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.Topbar__search{
+  display: flex;
+  align-items: center;
+}
+.Topbar__search input{
+  padding: 12px 100px 12px 12px;
+  width: 80%;
+  border: 1px solid #EBEBEB;
+  border-radius: 8px;
+}
+.Topbar__search input::placeholder{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: #969BA0;
+}
+
+.Topbar__search input:focus{
+  outline: none;
+}
+
+.Topbar__search .MuiSvgIcon-root{
+  color: #A4A4A4;
+  margin-left: -40px;
+}
