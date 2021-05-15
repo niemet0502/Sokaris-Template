@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import NotificationBadge from "./components/NotificationBadge/NotificationBadge"
+
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+
+import RedeemIcon from '@material-ui/icons/Redeem';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{paddingTop: '50px', paddingLeft: '50px'}}>
+      <NotificationBadge
+        Icon={NotificationsNoneIcon}
+        background="#FF5B5B"
+        color="rgb(255, 91, 91,0.15)"
+        count="12"
+      />
+
+      <NotificationBadge
+        Icon={RedeemIcon}
+        background="#5E6C93"
+        color="rgb(94, 108, 147, 0.15)"
+        count="5"
+      />
     </div>
   );
 }
